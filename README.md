@@ -1,2 +1,2 @@
 # learn-shell
-Bash shell
+Bash shell editing

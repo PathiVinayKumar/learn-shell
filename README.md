@@ -1,2 +1,2 @@
 # learn-shell
-Bash shell editing UPdating again
+Bash shell editing Updating again

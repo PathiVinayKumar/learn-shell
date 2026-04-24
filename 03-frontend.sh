@@ -1,4 +1,6 @@
-echo -e "\e[35m >>>>>>>> Install Nginx <<<<<<<<<<< \e[0m" | tee -a &>>/tmp/roboshop.log
+# this tee is to append the heading also into log file.
+
+echo -e "\e[35m >>>>>>>> Install Nginx <<<<<<<<<<< \e[0m" | tee -a &>>/tmp/roboshop.log 
 dnf install -y nginx &>>/tmp/nginx-output  &>>/tmp/roboshop.log
 
 echo -e "\e[35m >>>>>>>> Copy Nginx <<<<<<<<<<< \e[0m" | tee -a &>>/tmp/roboshop.log

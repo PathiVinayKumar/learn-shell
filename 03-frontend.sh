@@ -1,5 +1,6 @@
-dnf install -y nginx &>>/tmp/nginx-output
 echo -e "\e[35m >>>>>>>> Install Nginx <<<<<<<<<<< \e[0m"
+
+dnf install -y nginx &>>/tmp/nginx-output  &>>/tmp/roboshop.log
 
 cp nginx.conf /etc/nginx/nginx.conf &>>/tmp/nginx-output-conf
 
@@ -7,7 +8,7 @@ echo -e "\e[35m >>>>>>>> Copy Nginx <<<<<<<<<<< \e[0m"
 
 
 curl -fsSL https://rpm.nodesource.com/setup_20.x | bash -
-dnf install -y nodejs &>>/tmp/nodejs-output
+dnf install -y nodejs &>>/tmp/nodejs-output  &>>/tmp/roboshop.log
 echo -e "\e[35m >>>>>>>> Install Node js <<<<<<<<<<< \e[0m"
 
 
@@ -18,7 +19,7 @@ cd /tmp/frontend
 echo -e "\e[35m >>>>>>>> extracting the code and installing Nginx <<<<<<<<<<< \e[0m"
 
 unzip /tmp/frontend.zip
-npm install &>/tmp/null
+npm install &>/tmp/null &>>/tmp/roboshop.log
 
 echo -e "\e[35m >>>>>>>> Installing frontend <<<<<<<<<<< \e[0m"
 

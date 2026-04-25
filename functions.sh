@@ -1,4 +1,4 @@
-source common.sh
+#source common.sh
 sample1
 sample2
 sample1
